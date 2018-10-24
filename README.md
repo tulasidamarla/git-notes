@@ -152,7 +152,7 @@ git commit --amend
 Note: The above command will display an interactive editor, where in which we can change the command message if we want.
 
 ***
-If we want to see the last of files modified as part of a commit
+If we want to see the list of files modified as part of a commit
 -----------------------------------------------------------------
 git log --stat
 
@@ -162,12 +162,12 @@ git checkout <filename>
 
 Difference between git reset and git checkout
 ---------------------------------------------
-If we have two branches, 'master' and 'develop' pointing at different commits, and we're currently on 'develop' (so HEAD points to it) and if we run git reset master, 'develop' itself will now point to the same commit that 'master' does.
+If we have two branches, 'master' and 'develop' pointing at different commits, and we're currently on 'develop' (so HEAD points to it) and if we run git reset master, 'develop' itself will now point to the same commit that 'master' currently in.
 
-If we instead run git checkout master(switch branch), 'develop' will not move, HEAD itself will. It means, HEAD will now point to 'master'.
+If we instead run git checkout master 'develop' will not move, HEAD will switch to master. It means, HEAD will now point to 'master'.
 
 In both cases we're moving HEAD to point to commit A, but how we do so is very different. <br>
-reset will move the branch HEAD points to, checkout moves HEAD itself to point to another branch.
+reset will move the branch HEAD points to a commit, checkout switch to another branch.
 
 Cherry Pick
 -----------
